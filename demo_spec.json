@@ -1,0 +1,94 @@
+{
+  "projects": {
+    "core": [
+      "core.o"
+    ],
+    "net": [
+      "net.o"
+    ],
+    "storage": [
+      "storage.o"
+    ],
+    "app": [
+      "app.bin"
+    ],
+    "ui": [
+      "ui.bin",
+      "theme.dat"
+    ],
+    "plugin": [
+      "plugin.so",
+      "theme.dat"
+    ],
+    "broken": [
+      "broken.o"
+    ],
+    "consumer": [
+      "consumer.o"
+    ],
+    "cycA": [
+      "a.o"
+    ],
+    "cycB": [
+      "b.o"
+    ],
+    "lonely": [
+      "lonely.o"
+    ]
+  },
+  "dependencies": {
+    "net": [
+      "core"
+    ],
+    "storage": [
+      "core"
+    ],
+    "app": [
+      "net",
+      "storage"
+    ],
+    "ui": [
+      "app",
+      "nonexistent"
+    ],
+    "plugin": [
+      "app"
+    ],
+    "broken": [
+      "core"
+    ],
+    "consumer": [
+      "broken"
+    ],
+    "cycA": [
+      "cycB"
+    ],
+    "cycB": [
+      "cycA"
+    ],
+    "ghost": [
+      "core"
+    ]
+  },
+  "operations": [
+    {
+      "project": "core",
+      "reason": "修复内存泄漏"
+    },
+    {
+      "project": "core",
+      "reason": "调整日志级别"
+    },
+    {
+      "project": "cycA",
+      "reason": "重构"
+    },
+    {
+      "project": "nosuch",
+      "reason": "误操作"
+    }
+  ],
+  "failures": [
+    "storage"
+  ]
+}
