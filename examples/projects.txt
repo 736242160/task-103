@@ -1,0 +1,9 @@
+# 项目定义: 项目名: 产出文件列表
+core: libcore.a core.h
+util: libutil.a
+net: libnet.a
+app: app.bin
+ui: ui.bin
+extra: libutil.a        # 与 util 产出同名文件 -> 共享产物冲突
+modx: libmodx.a
+mody: libmody.a

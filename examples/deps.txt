@@ -1,0 +1,8 @@
+# 依赖定义: 项目名: 依赖的项目列表
+util: core
+net: core
+app: util net
+ui: core
+ghost: missinglib       # 依赖了未定义的项目 -> 依赖缺失
+modx: mody              # modx <-> mody 构成依赖环
+mody: modx
